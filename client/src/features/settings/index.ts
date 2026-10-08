@@ -1,0 +1,8 @@
+export { useSystemPreferences } from '@/features/settings/model/SystemPreferencesContext'
+export { SettingsPage } from '@/features/settings/pages/SettingsPage'
+export { RolesPermissionsPage } from '@/features/settings/pages/RolesPermissionsPage'
+export { CompanySettingsPage } from '@/features/settings/pages/CompanySettingsPage'
+export { NotificationSettingsPage } from '@/features/settings/pages/NotificationSettingsPage'
+export { SystemPreferencesPage } from '@/features/settings/pages/SystemPreferencesPage'
+export { SecuritySettingsPage } from '@/features/settings/pages/SecuritySettingsPage'
+export { UserManagementPage } from '@/features/settings/pages/UserManagementPage'

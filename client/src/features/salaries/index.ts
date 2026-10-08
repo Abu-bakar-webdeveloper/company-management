@@ -1,0 +1,6 @@
+export { SalariesListPage } from '@/features/salaries/pages/SalariesListPage'
+export { SalaryDetailPage } from '@/features/salaries/pages/SalaryDetailPage'
+export { SalaryCreatePage } from '@/features/salaries/pages/SalaryCreatePage'
+export { SalaryEditPage } from '@/features/salaries/pages/SalaryEditPage'
+export { PayrollSettingsPage } from '@/features/salaries/pages/PayrollSettingsPage'
+export { MySalaryPage } from '@/features/salaries/pages/MySalaryPage'

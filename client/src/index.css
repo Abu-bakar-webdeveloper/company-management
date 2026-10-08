@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Primary (Corporate Blue) ── */
+  --color-primary: #0f52BA;
+  --color-primary-muted: rgba(24, 95, 165, 0.1);
+  --color-primary-light: #4d9de0;
+  --color-primary-pale: #a8cff0;
+  --color-secondary: #136DEC;
+
+  /* ── Headings ── */
+  --color-heading: #00284f;
+  --color-heading-alt: #0a1628;
+
+  /* ── Text ── */
+  --color-text-muted: #778499;
+  --color-text-secondary: #4a5568;
+  --color-text-slate: #5a6a7a;
+  --color-label: #2c3e50;
+
+  /* ── Placeholders ── */
+  --color-placeholder: #c6c8ca;
+  --color-placeholder-alt: #94a3b8;
+
+  /* ── Surfaces & Page ── */
+  --color-page: #F8FAFB;
+  --color-surface: #ffffff;
+  --color-surface-muted: #F0F4F8;
+  --color-surface-input: #F0F4F8;
+
+  /* ── Borders ── */
+  --color-border: #d9e4ef;
+  --color-border-card: #e4edf6;
+  --color-border-checkbox: #b3cde8;
+  --color-divider: #c8d8e8;
+
+  /* ── Semantic ── */
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-warning-muted: #fef3c7;
+  --color-success-muted: #dcfce7;
+
+  /* ── Charts ── */
+  --color-chart-active: #EA580C;
+  --color-chart-completed: #136DEC;
+  --color-chart-expense-green: #639922;
+  --color-chart-expense-gray: #d1d5db;
+
+  /* ── Table ── */
+  --color-table-header: #e8f0f9;
+
+  /* ── Trend ── */
+  --color-trend-down: #f97316;
+
+  /* ── Shadows ── */
+  --shadow-card:
+    0px 20px 25px -5px rgba(24, 95, 165, 0.08),
+    0px 8px 10px -6px rgba(24, 95, 165, 0.06);
+  --shadow-stat:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.06),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.06);
+  --shadow-nav-active: 0px 1px 2px 0px rgba(24, 95, 165, 0.18);
+  --shadow-button-primary:
+    0px 10px 15px -3px rgba(24, 95, 165, 0.22),
+    0px 4px 6px -4px rgba(24, 95, 165, 0.18);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-heading);
+    background-color: var(--color-page);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html.dark {
+    --color-heading: #e8f0f9;
+    --color-heading-alt: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-text-secondary: #cbd5e1;
+    --color-text-slate: #94a3b8;
+    --color-label: #e2e8f0;
+    --color-placeholder: #64748b;
+    --color-placeholder-alt: #64748b;
+    --color-page: #0f172a;
+    --color-surface: #1e293b;
+    --color-surface-muted: #0f172a;
+    --color-surface-input: #334155;
+    --color-border: #334155;
+    --color-border-card: #334155;
+    --color-border-checkbox: #475569;
+    --color-divider: #475569;
+    --color-table-header: #1e293b;
+  }
+}
+
+@layer utilities {
+  .scrollbar-app {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-divider) transparent;
+  }
+
+  .scrollbar-app::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-app::-webkit-scrollbar-track {
+    background: transparent;
+    margin-block: 4px;
+  }
+
+  .scrollbar-app::-webkit-scrollbar-thumb {
+    background-color: var(--color-divider);
+    border-radius: 9999px;
+  }
+
+  .scrollbar-app::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary-pale);
+  }
+
+  .scrollbar-app::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
